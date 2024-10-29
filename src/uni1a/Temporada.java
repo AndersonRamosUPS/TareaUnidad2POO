@@ -1,5 +1,6 @@
 package uni1a;
 
+// Agregación de temporada en SerieDeTV
 public class Temporada {
 	private int numero;
 	private int episodios;
