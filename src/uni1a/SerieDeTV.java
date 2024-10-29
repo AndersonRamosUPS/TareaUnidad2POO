@@ -19,6 +19,13 @@ public class SerieDeTV extends ContenidoAudiovisual {
     public void agregarTemporada(Temporada temporada) {
         listaTemporadas.add(temporada);
     }
+    
+    public void mostrarTemporadas() {
+        System.out.println("Temporadas de la serie:");
+        for (Temporada temporada : listaTemporadas) {
+            System.out.println("Temporada: " + temporada.getNumero());
+        }
+    }
 
     public int getTemporadas() {
         return temporadas;
@@ -30,12 +37,13 @@ public class SerieDeTV extends ContenidoAudiovisual {
     
     @Override
     public void mostrarDetalles() {
-        System.out.println("Detalles de la película:");
+        System.out.println("Detalles de la serie de TV:");
         System.out.println("ID: " + getId());
         System.out.println("Título: " + getTitulo());
         System.out.println("Duración en minutos: " + getDuracionEnMinutos());
         System.out.println("Género: " + getGenero());
         System.out.println("Temporadas: " + this.temporadas);
+        mostrarTemporadas();
         System.out.println();
     }
 }

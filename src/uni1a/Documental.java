@@ -19,6 +19,13 @@ public class Documental extends ContenidoAudiovisual {
     public void agregarInvestigador(Investigador investigador) {
         investigadores.add(investigador);
     }
+    
+    public void mostrarInvestigadores() {
+        System.out.println("Investigadores del documental:");
+        for (Investigador investigador : investigadores) {
+            System.out.println(investigador.getNombre());
+        }
+    }
 
     public String getTema() {
         return tema;
@@ -30,15 +37,13 @@ public class Documental extends ContenidoAudiovisual {
     
     @Override
     public void mostrarDetalles() {
-        System.out.println("Detalles de la película:");
+        System.out.println("Detalles del documental:");
         System.out.println("ID: " + getId());
         System.out.println("Título: " + getTitulo());
         System.out.println("Duración en minutos: " + getDuracionEnMinutos());
         System.out.println("Género: " + getGenero());
         System.out.println("Tema: " + this.tema);
-        System.out.println("Investigador/es:");
-        for (Investigador investigador : investigadores) {
-        	System.out.println(investigador.getNombre());
-    	}
+        mostrarInvestigadores();
+        System.out.println();
     }
 }

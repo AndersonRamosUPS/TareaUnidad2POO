@@ -19,6 +19,13 @@ public class Pelicula extends ContenidoAudiovisual {
     public void agregarActor(Actor actor) {
     	actores.add(actor);
     }
+    
+    public void mostrarActores() {
+        System.out.println("Actores de la película:");
+        for (Actor actor : actores) {
+            System.out.println(actor.getNombre());
+        }
+    }
 
     public String getEstudio() {
         return estudio;
@@ -36,6 +43,7 @@ public class Pelicula extends ContenidoAudiovisual {
         System.out.println("Duración en minutos: " + getDuracionEnMinutos());
         System.out.println("Género: " + getGenero());
         System.out.println("Estudio: " + estudio);
+        mostrarActores();
         System.out.println();
     }
 }
