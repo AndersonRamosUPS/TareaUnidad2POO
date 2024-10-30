@@ -7,6 +7,7 @@ public class ProgramaCientifico extends ContenidoAudiovisual{
     private ArrayList<Investigador> investigadores; //Composición con Investigador
     private int episodios;
     private String frecuenciaEmision;
+    private ArrayList<Integer> calificaciones = new ArrayList<>();
     
     public ProgramaCientifico(String titulo, int duracionEnMinutos, String genero, String temaPrincipal, int episodios, String frecuenciaEmision) {
         super(titulo, duracionEnMinutos, genero);
@@ -19,6 +20,36 @@ public class ProgramaCientifico extends ContenidoAudiovisual{
     public void agregarInvestigador(Investigador investigador) {
         investigadores.add(investigador);
     }
+    
+    public Investigador buscarInvestigador(String nombre) {
+        for (Investigador investigador : investigadores) {
+            if (investigador.getNombre().equalsIgnoreCase(nombre)) {
+                return investigador;
+            }
+        }
+        return null; // Retorna null si no se encuentra el investigador
+    }
+    
+    public boolean eliminarInvestigador(String nombre) {
+        return investigadores.removeIf(investigador -> investigador.getNombre().equalsIgnoreCase(nombre));
+    }
+    
+    public void agregarCalificacion(int calificacion) {
+        if (calificacion >= 1 && calificacion <= 5) {
+            calificaciones.add(calificacion);
+        } else {
+            System.out.println("Calificación inválida. Debe ser entre 1 y 5.");
+        }
+    }
+
+    public double calcularCalificacionPromedio() {
+        int suma = 0;
+        for (int calificacion : calificaciones) {
+            suma += calificacion;
+        }
+        return calificaciones.isEmpty() ? 0 : (double) suma / calificaciones.size();
+    }
+
 
     public void mostrarInvestigadores() {
         System.out.println("Investigadores del programa:");
@@ -60,6 +91,7 @@ public class ProgramaCientifico extends ContenidoAudiovisual{
         System.out.println("Género: " + getGenero());
         System.out.println("Tema Principal: " + temaPrincipal);
         System.out.println("Episodios: " + episodios);
+        System.out.println("Calificación Promedio: " + calcularCalificacionPromedio());
         System.out.println("Frecuencia de Emisión: " + frecuenciaEmision);
         mostrarInvestigadores();
         System.out.println();
