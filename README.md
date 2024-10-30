@@ -1,5 +1,5 @@
 ## Proyecto de Programación Orientada a Objetos - Gestión de Contenidos Audiovisuales
-###1. Descripción del Proyecto
+### 1. Descripción del Proyecto
 Este proyecto es una aplicación de gestión de contenidos audiovisuales que permite organizar y visualizar información sobre diferentes tipos de producciones, como películas, series, obras teatrales, reality shows, y programas científicos. Utiliza conceptos de Programación Orientada a Objetos (POO) para modelar las relaciones entre clases y facilitar la organización y manipulación de datos en el sistema.
 ### 2. Objetivos y Propósito del Proyecto
 - Objetivo General: Aplicar los principios de POO en un sistema de gestión de contenidos audiovisuales, enfocándose en la implementación de clases, herencia, y relaciones entre entidades.
@@ -17,7 +17,7 @@ Este proyecto es una aplicación de gestión de contenidos audiovisuales que per
 	-** Mostrar Opiniones y Elenco:** Métodos para mostrar opiniones y el elenco en `ObraTeatral`.
 	- **Agregar y Mostrar Temporadas:** Métodos en `RealityShow` para gestionar temporadas.
 	
-###4. Instrucciones de Instalación y Uso
+### 4. Instrucciones de Instalación y Uso
 **Clonación del Repositorio**
 1. Crea una carpeta o dirígete al directorio donde deseas clonar el repositorio.
 	`cd nombre_del_repositorio`
@@ -34,9 +34,9 @@ Este proyecto es una aplicación de gestión de contenidos audiovisuales que per
 - **Buscar un Actor:** Ingresa el nombre del actor para verificar si está en el elenco de una obra.
 - **Calificar un Episodio:** Ingresa una calificación entre 1 y 5 para cada episodio y calcula el promedio.
 
-###5. Mejoras Adicionales
+### 5. Mejoras Adicionales
 - **Pruebas Unitarias:** Se han implementado pruebas unitarias para verificar la funcionalidad de métodos clave, como buscarActor, eliminarActor, agregarCalificacion, y calcularCalificacionPromedio.
 - **Optimización del Código:** Se han optimizado algunos métodos para mejorar la eficiencia y claridad del código.
 
-###6. Contribuciones y Agradecimientos
+### 6. Contribuciones y Agradecimientos
 Este proyecto fue desarrollado en el contexto de la Universidad Politécnica Salesiana como parte de un curso sobre Programación Orientada a Objetos. Agradecemos a todos los compañeros y profesores que apoyaron en el desarrollo de esta aplicación.
