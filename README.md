@@ -17,12 +17,14 @@ Este proyecto es una aplicación de gestión de contenidos audiovisuales que per
 	-** Mostrar Opiniones y Elenco:** Métodos para mostrar opiniones y el elenco en `ObraTeatral`.
 	- **Agregar y Mostrar Temporadas:** Métodos en `RealityShow` para gestionar temporadas.
 	
-### 4. Instrucciones de Instalación y Uso
+###4. Instrucciones de Instalación y Uso
 **Clonación del Repositorio**
-1. Crea una carpeta o dirígete al directorio donde deseas clonar el repositorio.
-	`cd nombre_del_repositorio`
+1. Crea una carpeta o dirígete al directorio donde deseas clonar el repositorio:
+
+	```cd nombre_del_repositorio```
 2. Clona el repositorio en tu máquina local con el siguiente comando utilizando git:
-	`git clone https://github.com/AndersonRamosUPS/TareaUnidad2POO.git`
+
+	```git clone https://github.com/AndersonRamosUPS/TareaUnidad2POO.git```
 
 **Ejecución de la Aplicación**
 1. Abre el proyecto en tu IDE preferido (Eclipse, IntelliJ, etc.).
