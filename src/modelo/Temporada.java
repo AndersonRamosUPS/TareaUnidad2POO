@@ -1,16 +1,17 @@
-package uni1a;
+package modelo;
 
-// Agregación de temporada en SerieDeTV
 public class Temporada {
 	private int numero;
 	private int episodios;
 	private int anioLanzamiento;
-    private String descripcion;
-	
-    public Temporada(int numero, String titulo, int añoLanzamiento, String descripcion) {
-        this.numero = numero;
-        this.descripcion = descripcion;
-    }
+	private String descripcion;
+
+	public Temporada(int numero, String descripcion, int anioLanzamiento, int episodios) {
+		this.numero = numero;
+		this.descripcion = descripcion;
+		this.anioLanzamiento = anioLanzamiento;
+		this.episodios = episodios;
+	}
 
 	public int getNumero() {
 		return numero;
@@ -43,7 +44,4 @@ public class Temporada {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	
-	
-	
 }

@@ -1,20 +1,23 @@
-package uni1a;
+package modelo;
 
 public abstract class ContenidoAudiovisual {
-    private static int contar = 0;
+    private static int contador = 1; // ID único
+    private int id;
     private String titulo;
     private int duracionEnMinutos;
     private String genero;
-    private int id;
 
     public ContenidoAudiovisual(String titulo, int duracionEnMinutos, String genero) {
-        this.id = contar++;
+        this.id = contador++;
         this.titulo = titulo;
         this.duracionEnMinutos = duracionEnMinutos;
         this.genero = genero;
     }
 
-    // Getter y Setter para el campo 'titulo'
+    public int getId() {
+        return id;
+    }
+
     public String getTitulo() {
         return titulo;
     }
@@ -23,7 +26,6 @@ public abstract class ContenidoAudiovisual {
         this.titulo = titulo;
     }
 
-    // Getter y Setter para el campo 'duracionEnMinutos'
     public int getDuracionEnMinutos() {
         return duracionEnMinutos;
     }
@@ -32,7 +34,6 @@ public abstract class ContenidoAudiovisual {
         this.duracionEnMinutos = duracionEnMinutos;
     }
 
-    // Getter y Setter para el campo 'genero'
     public String getGenero() {
         return genero;
     }
@@ -41,10 +42,5 @@ public abstract class ContenidoAudiovisual {
         this.genero = genero;
     }
 
-    // Getter para el campo 'id' (no se proporciona el Setter ya que 'id' se asigna en el constructor y parece ser inmutable)
-    public int getId() {
-        return id;
-    }
-    
-    public abstract void mostrarDetalles();
+    public abstract void mostrarDetalles(); // Cada subclase define sus detalles
 }
